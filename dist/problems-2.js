@@ -1,9 +1,16 @@
-//  solved problems 2 :
-const formatCoordinate = (coordinate) => {
-    // destructuring kora holo coordinate ke :
-    const [latitude, longitude, locationName] = coordinate;
-    return `Location: ${locationName} ${latitude} ${longitude}`;
+const processInput = (value) => {
+    if (typeof value === "string") {
+        return value.toLowerCase();
+    }
+    else if (typeof value === "number") {
+        return value * 10;
+    }
+    else {
+        return value ? "Active" : "Inactive";
+    }
 };
-const allcoordinate = formatCoordinate([23.8103, 90.4125, "Dhaka"]);
-console.log(allcoordinate);
+processInput("Hello world");
+processInput(12);
+processInput(true);
+processInput(false);
 export {};
