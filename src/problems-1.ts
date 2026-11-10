@@ -1,3 +1,5 @@
+// solved first problem :
+
 const multiplyValue = (value : number, multiplier?: number) => {
     if(multiplier === undefined){
        return value * 2;
